@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <title>🐱 Katana Cat</title>
+    <style>
+        * {
+            overflow: hidden;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --color-background: #f8f9fa;
+            --color-font-text: #000;
+            --color-font-decoration: #f72585;
+            --color-glitch-1: #3a0ca3;
+            --color-glitch-2: #f72585;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: var(--color-background);
+        }
+
+        .header {
+            font: 900 5vw Roboto, sans-serif;
+            color: var(--color-font-text);
+
+            font-style: normal;
+            text-decoration: underline;
+            text-decoration-color: var(--color-font-decoration);
+            text-decoration-thickness: 1ex;
+            text-underline-offset: -1.25ex;
+            text-decoration-skip-ink: none;
+        }
+
+        .glitch {
+            position: relative;
+
+            font-style: normal;
+            text-decoration: underline;
+            text-decoration-color: var(--color-font-decoration);
+            text-decoration-thickness: 1ex;
+            text-underline-offset: -1.25ex;
+            text-decoration-skip-ink: none;
+        }
+
+        .glitch:before,
+        .glitch:after {
+            width: 100%;
+
+            top: 0px;
+            position: absolute;
+
+            content: attr(data-text);
+
+            background-color: var(--color-background);
+
+            text-decoration: underline;
+            text-decoration-color: var(--color-font-decoration);
+            text-decoration-thickness: 1ex;
+            text-underline-offset: -1.25ex;
+            text-decoration-skip-ink: none;
+        }
+
+        .glitch:before {
+            left: -2px;
+
+            text-shadow: var(--color-glitch-1) 1px 0px;
+
+            animation: 15s linear 0s infinite alternate-reverse none running glitch-2;
+        }
+
+        .glitch:after {
+            left: 2px;
+
+            text-shadow: var(--color-glitch-2) -1px 0px;
+
+            animation: 5s linear 0s infinite alternate-reverse none running glitch;
+        }
+
+        @keyframes glitch {
+            0% {
+                clip-path: inset(6% 0 10% 0);
+            }
+
+            5% {
+                clip-path: inset(86% 0 6% 0);
+            }
+
+            10% {
+                clip-path: inset(82% 0 3% 0);
+            }
+
+            15% {
+                clip-path: inset(30% 0 43% 0);
+            }
+
+            20% {
+                clip-path: inset(93% 0 2% 0);
+            }
+
+            25% {
+                clip-path: inset(38% 0 34% 0);
+            }
+
+            30% {
+                clip-path: inset(11% 0 77% 0);
+            }
+
+            35% {
+                clip-path: inset(19% 0 52% 0);
+            }
+
+            40% {
+                clip-path: inset(86% 0 5% 0);
+            }
+
+            45% {
+                clip-path: inset(77% 0 5% 0);
+            }
+
+            50% {
+                clip-path: inset(1% 0 84% 0);
+            }
+
+            55% {
+                clip-path: inset(58% 0 15% 0);
+            }
+
+            60% {
+                clip-path: inset(99% 0 1% 0);
+            }
+
+            65% {
+                clip-path: inset(89% 0 8% 0);
+            }
+
+            70% {
+                clip-path: inset(91% 0 3% 0);
+            }
+
+            75% {
+                clip-path: inset(53% 0 33% 0);
+            }
+
+            80% {
+                clip-path: inset(33% 0 23% 0);
+            }
+
+            85% {
+                clip-path: inset(15% 0 29% 0);
+            }
+
+            90% {
+                clip-path: inset(55% 0 45% 0);
+            }
+
+            95% {
+                clip-path: inset(89% 0 9% 0);
+            }
+
+            100% {
+                clip-path: inset(44% 0 44% 0);
+            }
+        }
+
+        @keyframes glitch-2 {
+            0% {
+                clip-path: inset(69% 0 19% 0);
+            }
+
+            5% {
+                clip-path: inset(99% 0 1% 0);
+            }
+
+            10% {
+                clip-path: inset(26% 0 14% 0);
+            }
+
+            15% {
+                clip-path: inset(94% 0 4% 0);
+            }
+
+            20% {
+                clip-path: inset(87% 0 1% 0);
+            }
+
+            25% {
+                clip-path: inset(70% 0 6% 0);
+            }
+
+            30% {
+                clip-path: inset(80% 0 19% 0);
+            }
+
+            35% {
+                clip-path: inset(39% 0 58% 0);
+            }
+
+            40% {
+                clip-path: inset(69% 0 30% 0);
+            }
+
+            45% {
+                clip-path: inset(17% 0 59% 0);
+            }
+
+            50% {
+                clip-path: inset(65% 0 36% 0);
+            }
+
+            55% {
+                clip-path: inset(65% 0 11% 0);
+            }
+
+            60% {
+                clip-path: inset(16% 0 39% 0);
+            }
+
+            65% {
+                clip-path: inset(43% 0 19% 0);
+            }
+
+            70% {
+                clip-path: inset(16% 0 71% 0);
+            }
+
+            75% {
+                clip-path: inset(83% 0 7% 0);
+            }
+
+            80% {
+                clip-path: inset(60% 0 27% 0);
+            }
+
+            85% {
+                clip-path: inset(44% 0 26% 0);
+            }
+
+            90% {
+                clip-path: inset(37% 0 42% 0);
+            }
+
+            95% {
+                clip-path: inset(48% 0 3% 0);
+            }
+
+            100% {
+                clip-path: inset(31% 0 5% 0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <span class="header glitch" data-text="Beware! Katana Cat lives here!">Beware! Katana Cat lives here!</span>
+</body>
+
+</html>
